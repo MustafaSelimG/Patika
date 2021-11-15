@@ -5,6 +5,7 @@
 > ❏ Veri Yapıları ve Algoritmalar 
 > ❏ Java101 
 > ❏ Object Oriented Programming 
+> 
 > ❏ İleri Seviye GIT 
 > ❏ SQL 
 > ❏ Java 102 
