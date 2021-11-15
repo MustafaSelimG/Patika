@@ -27,11 +27,11 @@ public class ClassPassOrFail {
         if( average <= 100 && average >= 0){
 
             if (average >=55){
-                System.out.println("averagenız : "+average);
+                System.out.println("Your average : "+average);
                 System.out.println("You Passed the Class!");
             }
             else {
-                System.out.println("averagenız : "+average);
+                System.out.println("Your average : "+average);
                 System.out.println("You Didn't Pass the Class");
             }
         }
