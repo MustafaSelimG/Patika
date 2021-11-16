@@ -13,7 +13,7 @@ public class MineSweeper {
         int row = scanner.nextInt();
         System.out.print("Enter the array columns → ");
         int col = scanner.nextInt();
-        System.out.println("WE ARE ALL SET,LET'S START !");
+        System.out.println("\nWE ARE ALL SET,LET'S START !");
 
         String[][] array = new String[row][col];
         String[][] reveal = new String[row][col];
@@ -25,7 +25,7 @@ public class MineSweeper {
             }
         }
 
-        for (int i = 0; i < (row*col)/4; i++) {
+        for (int i = 1; i <= (row*col)/4; i++) {
             int x = new Random().nextInt(row);
             int y = new Random().nextInt(col);
 
@@ -37,13 +37,22 @@ public class MineSweeper {
             }
         }
 
+        System.out.println("MINE LOCATION\n");
+        for (int k = 0; k < col; k++) {
+            for (int l = 0; l < row; l++) {
+                System.out.print(array[k][l]+" ");
+            }
+            System.out.println();
+        }
+
         try {
-            for (int i = 0; i < (row*col); i++) {
-                System.out.print("\nEnter a row    → ");
+            for (int i = 1; i <=((row*col)-(row*col)/4); i++) {
+                System.out.print("Enter a row    → ");
                 int a = scanner.nextInt();
                 System.out.print("Enter a column → ");
                 int b = scanner.nextInt();
                 System.out.println();
+                int mine=0;
 
                 if ( array[a][b].equals("*")){
                     System.out.println("░░░░!!!GAME OVER!!!░░░░");
@@ -54,18 +63,69 @@ public class MineSweeper {
 
                 else if ( !array[a][b].equals("*")){
 
-                    array[a][b]= Integer.toString(row/2);
+                    if(a>=1 && b>=1){
+                        if (array[a-1][b-1].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    if(a>=1){
+                        if (array[a-1][b].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    if(a>=1 && b+1<col){
+                        if (array[a-1][b+1].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    if(b>=1){
+                        if (array[a][b-1].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    if(b+1<col){
+                        if (array[a][b+1].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    if(a+1<row && b>=1){
+                        if (array[a+1][b-1].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    if(a+1<row){
+                        if (array[a+1][b].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    if(a+1<row && b+1<col){
+                        if (array[a+1][b+1].equals("*")){
+                            mine++;
+                        }
+                    }
+
+                    array[a][b]= Integer.toString(mine);
                     reveal[a][b]=array[a][b];
 
                 }
 
-
+                System.out.println(" ");
                 for (int k = 0; k < col; k++) {
                     for (int l = 0; l < row; l++) {
                         System.out.print(reveal[k][l]+" ");
                     }
                     System.out.println();
                 }
+
+
+
 
                 System.out.println("\n♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦\n");
             }
