@@ -16,7 +16,7 @@
 
 > Bir uçak tipi, belirli sayıda pilota ihtiyaç duyabilir.
 
-> Bu sistemi tasvir eden Class(Sınıf) diyagramını çiziniz.
+Bu sistemi tasvir eden Class(Sınıf) diyagramını çiziniz.
 
 
 
