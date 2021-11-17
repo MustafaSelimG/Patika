@@ -11,6 +11,4 @@
 Not : Sınıflara ait nitelik ve davranışların belirtilmesine gerek yoktur.
 
 
-
-
-![umldiagram](https://user-images.githubusercontent.com/88919177/142051183-9fa05e45-3787-4fd5-acd3-6e2e69ea2156.png)
+![umldiagram](https://user-images.githubusercontent.com/88919177/142185760-abf9ea9f-0eca-4f07-946e-1c0c995194d9.png)
